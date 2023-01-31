@@ -18,23 +18,16 @@ export default function TopBar() {
                 </li>
                 <li className="topListItem">
                     GENRE
+                </li> 
+                <li className="topListItem">
+                    <Link className="link" to="/write">WRITE</Link>
                 </li>
-                <div className="topSearch">
-                    <div className="searchItem">
-                        <button className="searchBtn">
-                            Search
-                        </button>
-                        <input type="Search" placeholder="Search" className="searchInput" />
-                    </div>
-                </div>
             </ul>
         </div>
         
         <div className="topRight">
             <ul className="topList">
-                <li className="topListItem">
-                    <Link className="link" to="/write">WRITE</Link>
-                </li>
+               
                 <li className="topListItem">
                     {user && "LOGOUT"}
                 </li>

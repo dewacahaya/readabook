@@ -13,6 +13,7 @@
 
 .topLeft, .topRight {
     flex: 3;
+    margin-top: 0px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -68,7 +69,7 @@
 
 .searchInput {
     width: 200px;
-    height: 20px;
+    height: 15px;
     align-items: center;
     justify-items: center;
     background-color: transparent;
