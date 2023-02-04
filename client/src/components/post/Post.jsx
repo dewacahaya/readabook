@@ -1,19 +1,26 @@
 import "./post.css"
+import {Link} from "react-router-dom"
 
-export default function Post() {
+export default function Post({post}) {
   return (
     <div className="post">
-      <img className="postImg" src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg" alt="" 
+      {post.photo && (
+      <img className="postImg" 
+      src={post.photo} alt="" 
       />
+      )}
         <div className="postInfo">
           <div className="postCats">
-            <span className="postCat">Horror</span>
-            <span className="postCat">Comedy</span>
+            {post.categories.map(c=>(
+              <span className="postCat">{c.name}</span>
+            ))}
           </div>
-            <span className="postTitle">Lorem ipsum dolor sit amet consectetur adipisicing</span>
+          <Link to={`/post/${post._id}`} className="link">
+            <span className="postTitle">{post.title}</span>
+          </Link>
             <hr />
-            <span className="postDate">Sunday</span>
-            <p className="postDesc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita, labore. Accusantium porro cum eius optio delectus in illo at corporis dignissimos, harum doloribus iste nesciunt obcaecati libero molestias velit nulla.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita, labore. Accusantium porro cum eius optio delectus in illo at corporis dignissimos, harum doloribus iste nesciunt obcaecati libero molestias velit nulla.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita, labore. Accusantium porro cum eius optio delectus in illo at corporis dignissimos, harum doloribus iste nesciunt obcaecati libero molestias velit nulla.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita, labore. Accusantium porro cum eius optio delectus in illo at corporis dignissimos, harum doloribus iste nesciunt obcaecati libero molestias velit nulla.</p>
+            <span className="postDate">{new Date(post.createdAt).toDateString()}</span>
+            <p className="postDesc">{post.desc}</p>
           </div>
         </div>
   )

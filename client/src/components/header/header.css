@@ -20,17 +20,9 @@
     font-size: 94px;
 }
 
-/* .headerImg2 {
-    width: 100%;
-    height: 200px;
-    position: relative;
-    margin-top: 0px;
-    opacity: 50%;
-} */
-
 .headerImg {
     width: 100%;
-    height: 500px;
+    height: 600px;
     object-fit: cover;
 }
 
