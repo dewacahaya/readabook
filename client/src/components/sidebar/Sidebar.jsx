@@ -1,7 +1,8 @@
 import axios from "axios";
-import { useEffect } from "react";
+import { useContext, useEffect } from "react";
 import { useState } from "react"
 import { Link } from "react-router-dom";
+import { Context } from "../../context/Context";
 import "./sidebar.css"
 
 export default function Sidebar() {
@@ -19,7 +20,9 @@ export default function Sidebar() {
     <div className="sidebar">
       <div className="sidebarItem">
         <span className="sidebarTitle">ABOUT ME</span> 
-            <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg" alt="" />
+            <img 
+            src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg" 
+            alt="" />
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste laudantium a 
                 ipsum aspernatur delectus reiciendis unde suscipit quidem quisquam tempora minima, 
                 soluta odit reprehenderit consectetur. Rem atque impedit modi sequi?</p>

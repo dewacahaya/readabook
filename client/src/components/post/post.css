@@ -5,14 +5,15 @@
 }
 
 .postImg {
-    width: 220px;
-    height: 300px;
+    width: 20vw;
+    height: 55vh;
     object-fit: cover;
     border-radius: 10px;
 }
 .postInfo {
     display: flex;
     flex-direction: column;
+    margin-left: 15px;
     width: 100%;
     align-items: baseline;
 }
@@ -24,6 +25,7 @@
     line-height: 20px;
     margin-top: 15px;
     margin-right: 10px;
+    margin-left: 15px;
     cursor: pointer;
 }
 
@@ -31,7 +33,7 @@
     font-family: 'Josefin Sans', sans-serif;
     width: 100;
     font-size: 24px;
-    margin-left: 15px;
+    margin-left: 10px;
     font-weight: 700;
     margin-top: 15px;
     cursor: pointer;
