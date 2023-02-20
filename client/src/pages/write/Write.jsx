@@ -6,6 +6,7 @@ import { Context } from "../../context/Context";
 export default function Write() {
 
     const [title, setTitle] = useState("")
+    const [categories, setCats] = useState("")
     const [desc, setDesc] = useState("")
     const [file, setFile] = useState(null)
     const {user} = useContext(Context)
@@ -15,6 +16,7 @@ export default function Write() {
         const newPost = {
             username: user.username,
             title,
+            categories,
             desc
         };
         if(file){
@@ -52,6 +54,8 @@ export default function Write() {
 
                 <input type="text" placeholder="Title" className="writeInput" autoFocus={true}
                 onChange={e => setTitle(e.target.value)}/>
+                <input type="text" placeholder="Categories" className="writeInput"
+                onChange={(e) => setCats(e.target.value)} />
             </div>
             <div className="writeFormGroup">
                 <textarea placeholder="write your imajination, share your experience" type="text" className="writeInput writeText"

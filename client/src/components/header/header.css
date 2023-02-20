@@ -1,4 +1,4 @@
-.headerTitles {
+/* .headerTitles {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -18,11 +18,9 @@
     position: absolute;
     top: 20%;
     font-size: 94px;
-}
+} */
 
-.headerImg {
+.image {
     width: 100%;
-    height: 600px;
-    object-fit: cover;
 }
 

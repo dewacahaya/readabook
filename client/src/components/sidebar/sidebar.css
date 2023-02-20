@@ -37,6 +37,7 @@
 
 .sidebarItem > p {
     padding: 30px;
+    text-align: center  ;
 }
 
 .sidebarList {
@@ -47,6 +48,7 @@
 .sidebarListItem {
     display: inline-block;
     width: 50%;
-    margin-top: 15px;
+    margin-right: 40px;
+    margin-top: 5px;
     cursor: pointer;
 }

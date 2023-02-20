@@ -1,8 +1,7 @@
 import axios from "axios";
-import { useContext, useEffect } from "react";
+import { useEffect } from "react";
 import { useState } from "react"
 import { Link } from "react-router-dom";
-import { Context } from "../../context/Context";
 import "./sidebar.css"
 
 export default function Sidebar() {
@@ -19,19 +18,17 @@ export default function Sidebar() {
   return (
     <div className="sidebar">
       <div className="sidebarItem">
-        <span className="sidebarTitle">ABOUT ME</span> 
+        <span className="sidebarTitle">ABOUT THIS WEBSITE</span> 
             <img 
             src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg" 
             alt="" />
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste laudantium a 
-                ipsum aspernatur delectus reiciendis unde suscipit quidem quisquam tempora minima, 
-                soluta odit reprehenderit consectetur. Rem atque impedit modi sequi?</p>
+            <p>This website was created with the hope of increasing young children's interest in reading by presenting interesting stories</p>
       </div>
       <div className="sidebarItem">
       <span className="sidebarTitle">CATEGORIES</span> 
       <ul className="sidebarList">
         {cats.map((c)=>(
-          <Link to={`/?cat=${c.name}`} className="link">
+          <Link to={`/?cats=${c.name}`} className="link">
             <li className="sidebarListItem">{c.name}</li>
           </Link>
         ))}

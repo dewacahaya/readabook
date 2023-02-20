@@ -13,6 +13,7 @@ export default function SinglePost() {
   const PF = "http://localhost:5000/images/"
   const {user} = useContext(Context)
   const [title, setTitle] = useState("")
+  const [categories, setCats] = useState("")
   const [desc, setDesc] = useState("")
   const [updateMode, setUpdateMode] = useState(false)
 
@@ -21,6 +22,7 @@ export default function SinglePost() {
       const res = await axios.get("/posts/"+path);
       setPost(res.data);
       setTitle(res.data.title)
+      setCats(res.data.categories)
       setDesc(res.data.desc)
     };
     getPost()
@@ -39,6 +41,7 @@ export default function SinglePost() {
       await axios.put(`/posts/${post._id}`, {
         username: user.username, 
         title, 
+        categories,
         desc,
     });
       setUpdateMode(false)
@@ -74,6 +77,12 @@ export default function SinglePost() {
             Author: 
             <Link to={`/?user=${post.username}`} className="link">
                 <b>{post.username}</b>
+            </Link>
+          </span>
+          <span className="singlePostAuthor">
+            Genre: 
+            <Link to={`/?cats=${post.categories}`} className="link">
+                <b>{post.categories}</b>
             </Link>
           </span>
           <span className="singlePostDate">{new Date(post.createdAt).toDateString()}</span>
